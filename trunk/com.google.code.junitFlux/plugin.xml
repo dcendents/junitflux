@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="builder"
+         name="JUnitFluxBuilder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            callOnEmptyDelta="false"
+            hasNature="true"
+            isConfigurable="false">
+         <run
+               class="com.google.code.junitFlux.builder.JUnitFluxBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="nature"
+         name="JUnitFluxNature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="com.google.code.junitFlux.nature.JUnitFluxNature">
+         </run>
+      </runtime>
+      <builder
+            id="com.google.code.junitFlux.builder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IProject"
+            nameFilter="*"
+            id="contribution">
+         <action
+               class="com.google.code.junitFlux.nature.ToggleNatureAction"
+               enablesFor="+"
+               id="org.junit.flux.addRemoveNatureAction"
+               label="Add/Remove JUnit Flux Nature"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JUnit Continuous Flux
+Bundle-SymbolicName: com.google.code.junitFlux;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.google.code.junitFlux.Activator
+Bundle-Vendor: KTI
+Require-Bundle: org.eclipse.ui;bundle-version="3.5.0",
+ org.eclipse.core.runtime;bundle-version="3.5.0",
+ org.eclipse.jdt.core;bundle-version="3.5.0",
+ org.eclipse.jdt.junit;bundle-version="3.5.0",
+ org.eclipse.jdt.launching;bundle-version="3.5.0",
+ org.eclipse.jdt.ui;bundle-version="3.5.0",
+ org.eclipse.debug.ui;bundle-version="3.5.0",
+ org.aspectj.runtime;resolution:=optional;visibility:=reexport,
+ org.junit4;resolution:=optional,
+ org.eclipse.text;resolution:=optional
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: com.google.code.junitFlux,
+ com.google.code.junitFlux.builder,
+ com.google.code.junitFlux.internal.invoker;x-internal:=true,
+ com.google.code.junitFlux.internal.utils;x-internal:=true,
+ com.google.code.junitFlux.nature
