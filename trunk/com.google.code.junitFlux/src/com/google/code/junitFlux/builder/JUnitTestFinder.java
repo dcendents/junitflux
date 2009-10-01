@@ -16,6 +16,7 @@ import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaModelException;
 
+import com.google.code.junitFlux.Activator;
 import com.google.code.junitFlux.internal.utils.JUnitValidator;
 import com.google.code.junitFlux.internal.utils.Util;
 
@@ -50,12 +51,21 @@ public class JUnitTestFinder {
 		return result;
 	}
 
-	protected void addResource(List<IType> result, ICompilationUnit candidate) throws JavaModelException {
-		if (candidate == null || !candidate.isStructureKnown())
-			return;//ignore tests with compile errors
+	protected void addResource(List<IType> result, ICompilationUnit candidate) {
+		if (hasCompileErrors(candidate))
+			return;
 		IType type = candidate.findPrimaryType();
 		if (validator.isValidTest(type))
 			result.add(type);
+	}
+
+	private boolean hasCompileErrors(ICompilationUnit candidate) {
+		try {
+			return candidate == null || !candidate.isStructureKnown();
+		} catch (JavaModelException e) {
+			Activator.getDefault().log("WARN Will ignore candidate: "+candidate, e);
+			return true;
+		}
 	}
 
 	/** return package children across all source folders*/ 
