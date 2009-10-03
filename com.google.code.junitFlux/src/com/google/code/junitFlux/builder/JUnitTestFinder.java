@@ -72,6 +72,8 @@ public class JUnitTestFinder {
 	private Set<ICompilationUnit> getPackageChildren(IContainer packageResource) throws JavaModelException {
 		Set<ICompilationUnit> result = new HashSet<ICompilationUnit>();
 		IPackageFragment javaPackage = Util.toJavaPackage(packageResource);
+		if (javaPackage == null) 
+			return result;
 		String packageName = javaPackage.getElementName();
 		for (IPackageFragmentRoot source : getSourceLocations()) {
 			IPackageFragment packageFragment = source.getPackageFragment(packageName);
