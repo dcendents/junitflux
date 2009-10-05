@@ -63,7 +63,7 @@ public class JUnitTestFinder {
 		try {
 			return candidate == null || !candidate.isStructureKnown();
 		} catch (JavaModelException e) {
-			Activator.getDefault().log("WARN Will ignore candidate: "+candidate, e);
+			Activator.getDefault().debug("Will ignore candidate: "+candidate, e);
 			return true;
 		}
 	}
