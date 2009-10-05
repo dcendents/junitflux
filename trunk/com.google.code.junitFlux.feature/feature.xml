@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="com.google.code.junitFlux.feature"
-      label="JUnit Flux feature"
+      label="JUnit Flux"
       version="1.0.3"
       provider-name="titorenko">
 
