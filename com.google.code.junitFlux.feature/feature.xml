@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.google.code.junitFlux.feature"
+      label="JUnit Flux feature"
+      version="1.0.3"
+      provider-name="titorenko">
+
+   <description url="http://code.google.com/p/junitflux">
+      JUnit Flux is an Eclipse plugin that will execute JUnit tests automatically, when you save your Java class or test itself, provided that class under test and unit test lie in the same package and unit test name follows naming convention of prefixing or suffixing with test (&quot;.*&quot;+name+&quot;.*Test.*&quot; or &quot;.*Test.*&quot;+name+&quot;.*&quot;).
+
+These conventions allow JUnit Flux to find relevant unit tests very quickly, thus providing you immediate feedback on your code change. JUnit Flux will react on multiple file changes as well, like those resulting from automatic refactorings.
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <url>
+      <update url="http://junitflux.googlecode.com/svn/trunk/com.google.code.junitFlux.site"/>
+   </url>
+
+   <plugin
+         id="com.google.code.junitFlux"
+         download-size="25"
+         install-size="25"
+         version="1.0.3"
+         unpack="false"/>
+
+</feature>
