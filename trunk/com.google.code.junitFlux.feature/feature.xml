@@ -2,8 +2,8 @@
 <feature
       id="com.google.code.junitFlux.feature"
       label="JUnit Flux"
-      version="1.0.3"
-      provider-name="titorenko">
+      version="1.0.4"
+      provider-name="Constantin Titorenko">
 
    <description url="http://code.google.com/p/junitflux">
       JUnit Flux is an Eclipse plugin that will execute JUnit tests automatically, when you save your Java class or test itself.
@@ -121,7 +121,7 @@ This Agreement is governed by the laws of the State of New York and the intellec
          id="com.google.code.junitFlux"
          download-size="25"
          install-size="25"
-         version="1.0.3"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

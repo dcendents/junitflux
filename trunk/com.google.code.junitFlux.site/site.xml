@@ -3,6 +3,9 @@
    <feature url="features/com.google.code.junitFlux.feature_1.0.3.jar" id="com.google.code.junitFlux.feature" version="1.0.3">
       <category name="junitFlux"/>
    </feature>
+   <feature url="features/com.google.code.junitFlux.feature_1.0.4.jar" id="com.google.code.junitFlux.feature" version="1.0.4">
+      <category name="junitFlux"/>
+   </feature>
    <category-def name="junitFlux" label="JUnit Flux">
       <description>
          JUnit Flux feature
