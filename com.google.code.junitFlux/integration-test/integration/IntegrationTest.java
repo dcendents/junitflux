@@ -97,11 +97,11 @@ public class IntegrationTest extends TestRunListener {
 
 		IFolder srcFolder = createFolder(project, "src");
 		IFolder srcPackage = createFolder(srcFolder, "mypackage");
-		classUnderTest = createFile(srcPackage, "Myclass.java", "");
+		classUnderTest = createFile(srcPackage, "MyClass.java", "");
 		
 		IFolder testFolder = createFolder(project, "test");
 		IFolder testPackage = createFolder(testFolder, "mypackage");
-		createFile(testPackage, "MyclassTest.java", "test.source");
+		createFile(testPackage, "MyClassTest.java", "test.source");
 
 		JavaCapabilityConfigurationPage page = new JavaCapabilityConfigurationPage();
 		List<IClasspathEntry> classpath = new ArrayList<IClasspathEntry>();
