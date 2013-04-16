@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JUnit Continuous Flux
 Bundle-SymbolicName: com.google.code.junitFlux;singleton:=true
-Bundle-Version: 1.0.4
+Bundle-Version: 1.0.5
 Bundle-Activator: com.google.code.junitFlux.Activator
 Bundle-Vendor: Constantin Titorenko
 Require-Bundle: org.eclipse.ui,

@@ -13,7 +13,7 @@ public class Util {
 	
 	public static boolean isJavaFile(IResource resource) {
 		if (resource.getType() == IResource.FILE && resource.exists()) {
-			return "java".equals(resource.getFileExtension());
+			return resource.getAdapter(IJavaElement.class) != null;
 		}
 		return false;
 	}
